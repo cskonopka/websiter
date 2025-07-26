@@ -5,6 +5,13 @@ body {
     color: #111;
 }
 
+.custom-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 0px;
+    vertical-align: middle;
+}
+
 
 /* header {
     text-align: center;
@@ -30,6 +37,7 @@ header {
 .site-title {
     margin-bottom: 6px;
     margin-bottom: 20px;
+    font-size: 47px;
     font-family: "Code Bold", sans-serif !important;
 }
 
@@ -317,6 +325,7 @@ nav {
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: left;
 }
 
 .bio-text h1 {
@@ -358,24 +367,22 @@ nav {
     border-radius: 6px;
 }
 
-
-/* .bio-grid {
+.bio-grid {
     /* display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 40px;
     padding: 20px;
     margin-bottom: 80px; */
-
-display: grid;
-grid-template-columns: 1fr 2fr;
-gap: 40px;
-align-items: start;
-max-width: 1000px;
-margin: 60px auto;
-padding: 0 20px;
-
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
+
 */
 /* .bio-image img {
     width: 100%;
@@ -389,20 +396,22 @@ padding: 0 20px;
     height: auto;
     border-radius: 6px;
 } */
+
 .bio-text {
     font-size: 1rem;
     line-height: 1.6;
 }
+
 @media (max-width: 768px) {
     .bio-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
     .bio-text {
         margin-top: 20px;
     }
 }
+
 @font-face {
     font-family: "Code Bold";
     src: url("fonts/CodeBold.otf") format("opentype");
@@ -410,9 +419,14 @@ padding: 0 20px;
     font-style: normal;
     font-display: swap;
 }
+
 .site-footer {
     text-align: center;
     font-size: 0.85rem;
     color: #777;
     padding: 40px 0 20px;
+}
+
+#site-title {
+    transition: opacity 1s ease;
 }
