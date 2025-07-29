@@ -28,7 +28,7 @@
             <p class="info-links">
                 <a href="bio.html">bio</a> ·
                 <a href="artistcv.html">artist cv</a> ·
-                <a href="https://cskonopka.github.io/conspectus/" target="_blank">work cv</a>
+                <a href="workcv.html">work cv</a>
             </p>
 
             <div class="social-icons">
@@ -57,6 +57,61 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="script.js"></script>
+    <script>
+  function createTagList(tagString) {
+    return tagString
+      .split('-')
+      .filter(Boolean)
+      .map(tag => `<span class="tag">${tag.trim()}</span>`)
+      .join(' ');
+  }
+
+  function createBulletList(infoString) {
+    return '<ul>' + infoString
+      .split('\n')
+      .filter(line => line.trim().startsWith('•') || line.trim().startsWith('-'))
+      .map(line => `<li>${line.replace(/^[-•]\s*/, '').trim()}</li>`)
+      .join('') + '</ul>';
+  }
+
+  Papa.parse('data/resume.csv', {
+    download: true,
+    header: true,
+    complete: function(results) {
+      const data = results.data;
+      const container = document.getElementById('workcv');
+      
+      const grouped = {};
+
+      // Group by company (job)
+      data.forEach(row => {
+        const company = row.job.trim();
+        if (!grouped[company]) grouped[company] = [];
+        grouped[company].push(row);
+      });
+
+      Object.keys(grouped).forEach(company => {
+        const section = document.createElement('section');
+        section.classList.add('cv-entry');
+        section.innerHTML = `<h2>${company}</h2>`;
+
+        grouped[company].forEach(row => {
+          section.innerHTML += `
+            <div class="role-entry">
+              <h3>${row.role}</h3>
+              <p><strong>Time:</strong> ${row.time}</p>
+              <p><strong>Skills:</strong> ${createTagList(row.skills)}</p>
+              <p><strong>Topics:</strong> ${createTagList(row.topics)}</p>
+              <p><strong>Info:</strong> ${createBulletList(row.info)}</p>
+            </div>`;
+        });
+
+        container.appendChild(section);
+      });
+    }
+  });
+</script>
+
 
 
 </body>

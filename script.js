@@ -33,6 +33,7 @@ function renderEntries(data) {
 }
 
 
+
 // document.querySelectorAll("nav button").forEach(btn => {
 //     btn.addEventListener("click", () => {
 //         const filter = btn.dataset.filter;

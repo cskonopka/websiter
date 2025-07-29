@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>cskonopka | Work CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="site-title"><a href="/">cskonopka</a></h1>
+      <p class="info-links">
+        <a href="bio.html">bio</a> ·
+        <a href="artistcv.html">artist cv</a> ·
+        <a href="workcv.html">work cv</a>
+      </p>
+            <div class="social-icons">
+                <a href="https://github.com/cskonopka" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://youtube.com/cskonopka" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://linktr.ee/cskonopka" target="_blank" aria-label="Linktree">
+                    <img src="images/lk.png" alt="Linktree" class="custom-icon" />
+                </a>
+                <a href="https://linkedin.com/in/christopherkonopka" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/cskonopka" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+    </header>
+
+    <section id="workcv">
+        <h1 class="page-heading">Work Curriculum Vitae</h1>
+    </section>
+
+    <footer class="site-footer">
+      <p>powered by ai 😊</p>
+    </footer>
+  </div>
+
+  <!-- PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+  function createTagList(tagString) {
+    return tagString
+      .split('-')
+      .filter(Boolean)
+      .map(tag => `<span class="tag">${tag.trim()}</span>`)
+      .join(' ');
+  }
+
+  function createBulletList(infoString) {
+    return '<ul>' + infoString
+      .split('\n')
+      .filter(line => line.trim().startsWith('•') || line.trim().startsWith('-'))
+      .map(line => `<li>${line.replace(/^[-•]\s*/, '').trim()}</li>`)
+      .join('') + '</ul>';
+  }
+
+  Papa.parse('data/resume.csv', {
+    download: true,
+    header: true,
+    complete: function(results) {
+      const data = results.data;
+      const container = document.getElementById('workcv');
+      
+      const grouped = {};
+
+      // Group by company (job)
+      data.forEach(row => {
+        const company = row.job.trim();
+        if (!grouped[company]) grouped[company] = [];
+        grouped[company].push(row);
+      });
+
+      Object.keys(grouped).forEach(company => {
+        const section = document.createElement('section');
+        section.classList.add('cv-entry');
+        section.innerHTML = `<h1>${company}</h1>`;
+
+        grouped[company].forEach(row => {
+         section.innerHTML += `
+  <div class="role-entry">
+    <h2>${row.role}</h2>
+    <p><em><strong>Time</strong></em> &rarr; ${row.time}</p>
+    <p><em><strong>Skills</strong></em> &rarr; ${createTagList(row.skills)}</p>
+    <p><em><strong>Topics</strong></em> &rarr; ${createTagList(row.topics)}</p>
+    <p><em><strong>Info</strong></em>${createBulletList(row.info)}</p>
+  </div>`;
+
+        });
+
+        container.appendChild(section);
+      });
+    }
+  });
+</script>
+</body>
+</html>

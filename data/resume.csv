@@ -1,0 +1,55 @@
+job,role,time,skills,topics,info
+Motional,Principal UX Hardware/Software Engineer,04/2023 - 07/2024,Arduino · Raspberry Pi · Node.js · Javascript · Cellular · AWS · Automation · Linux · IoT,Autonomous Vehicles · Solutions Architect · User testing · Technical Documentation · Cybersecurity,"- Product technical advisory, focusing on cross-team communication between Engineering, Operations and Product.
+- Led a small team focused on creating CES quality user journey prototypes for VIP, C-Suite and dignitary user journey showcases.
+- Created IoT prototypes for Motional/Uber delivery collaboration designs for the Product team.
+- Managed a VR team focused on User Journey development, HMI experiences, and patent awarded robotics use cases.
+- Product team liaison for Cybersecurity teams, responsible for validating Product tests so they adhere to updated protocols."
+Motional,Senior UX Hardware/Software Engineer,04/2021 - 04/2023,Arduino · Raspberry Pi · Node.js · Javascript · Cellular · AWS · Automation · Linux · IoT,Autonomous Vehicles · Solutions Architect · Product User-testing · Technical Documentation · Procurement,"- Led the technical development, cross-team coordination and sourced materials for several Hyundai Ionic 5 EV prototypes vehicles for the Product team.
+- Created a modular software/hardware platform to enable Product teams the ability to validate Engineering use cases in real-life settings.
+- Hardware/software integration lead for UI/UX user and accessibility testing for Lyft, C-Suite, Hyundai, Kia, and various dignitaries."
+Motional,UX Hardware/Software Engineer,04/2020 - 04/2021,Arduino · Raspberry Pi · Node.js · Javascript · Cellular · AWS · Automation · Linux · IoT,Solutions Architect · User testing · QA · Technical Documentation,"- Created an IoT vehicle hardware/software sandbox for Product testing a ride-share network in collaboration with Cloud & Engineering teams.
+- Validated automotive and experimental hardware components for the Product team provided by vendors to determine if they aligned with use cases provided by Design & Research teams.
+- Created a VR platform for validating User Journey experiences and help define internal HMI experiences to inform Engineering."
+Twilio,Developer Evangelist,08/2018 - 07/2019,Arduino · Raspberry Pi · Node.js · Go · Javascript · React · AWS · Azure · Linux · Git,Cellular IoT · Community Outreach · Blogging · Technical Documentation,"- Inspire and equip new Twilio IoT developers using commercially available cellular IoT hardware through blog content, tutorials, and quick-start content.
+- Sponsor hackathons, host IoT workshops, and take part in panels with a focus on clarifying the development process for individuals curious about cellular IoT.
+- Provide specialized IoT solutions for developers using the T-Mobile Narrowband developer kit and the Twilio SIM.
+- Create internal hardware development work-flows specifically for equipping Twilions interested in IoT.
+- Designed the ""SIGNAL Smart Door""; an interactive Narrowband product demo made for Twilio SIGNAL 2018.
+- Created the TwilioIoT GitHub repository for sharing IoT code and snippets with internal & external Twilio users."
+yack.com,Full Stack Developer,09/2017 - 06/2018,Javascript · Node.js · Express · React · AWS · EC2 · DynamoDB · Websockets,Web Chat · SMS · UI/UX · Cloud,"- Responsible for designing and developing a text-based notification for interacting with Emergency Services over a web chat using Twilio.
+- Developed the back-end using Node.js and created a cloud architecture from scratch using AWS EC2, S3, and DynamoDB.
+- Created an API for receiving incoming SMS messages from a client and updates the user’s account using WebSockets.
+Installed a prototype user base using Auth0, created profile templates and added an admin log viewer for saved calls.- "
+Multimedia Innovations,Full Stack Developer,01/2017 - 08/2017,Javascript · Node.js · Express · IBM Watson · YouTube,Text-to-Speech · Webpage Automation · Transcriptions,"- Invented an automation method that takes a YouTube link and generates a new webpage with an embedded searchable transcription text, audio, and video interface.
+- Created features such as keyword highlighting, quote/word save & share and keyword playback."
+The Semisphere Group,Lead R&D Hardware & Software Developer,07/2016 - 01/2018,Raspberry Pi · Python · Linux · MaxMSP · Jitter · Unreal Engine · Arduino · Android · Processing,VR · AR · HCI · Neuroscience Research · Hardware Intergration,"- Responsible for designing custom hardware/software solutions for Rhode Island Space Grant Consortium projects and Brown University’s Planetary Geology department under the direction of Seth Horowitz, PhD & Peter H. Schultz, PhD.
+- Developed a modular hardware/software anti-nausea solution called “Oream” that can help lessen the effects of vertigo.
+- Built custom VR software for navigating models of distant geological structures in real-time with joystick control and location transport for geological surveying for Brown University’s Planetary Geology department.
+- Created custom prototyping software to test prosthetic hand gestures."
+The Engine Institute,Lead R&D Hardware & Software Developer,01/2016 - 05/2016,MaxMSP · Jitter- MindWave · Emotiv · Arduino · Neurosky MindWave,Brainwave Algorithms · Serial · LED · Sculpture,"- Developer of “MindDraw”, a real-time interactive brainwave visualizer controlled by a participant’s “Meditation” and “Attention” brainwave patterns using the NeuroSky MindWave.
+- Created software to capture & filter user brainwave patterns for developing “experience” presets.
+- Designed a physics engine to provide dynamic control based on a user’s brainwave pattern.
+- Architect of “Imagining Blue”, an interactive LED sculpture controlled with brainwaves of a user.
+- Invented a modular serial stack that allowed 30+ simultaneous serial connections using an Arduino.
+- Developed custom software that modularised brainwave filtering algorithms and visualizations."
+Pickasound,Lead R&D/Web Audio Developer/Integration Specialist,09/2015 - 01/2017,Javascript · React · Redux · Wavesurfer.js · Web Audio API · DSP.js · Csound · Node.js,DSP Architecture Design · Automation · Web Audio API Integration,"- Designed the audio DSP architecture which, included a standardized effect chain, pitch-shifting, time-stretching and multi-track recording with automation.
+- Created internal and UI/UX unit-tests for audio DSP algorithms.
+- Developed webpage templates and UI/UX designs.
+- Researched and developed fast-rendering audio algorithms."
+Dave Jones Design,Hardware Beta Tester,07/2015,Hardware,Eurorack Synthesizers · Beta testing · Bug tracking,- Documented leading up to the release of the O'Tool+.
+DSP Concepts,Integration Specialist,06/2015 - 08/2015,Pure Data · AudioWeaver,Interconnectivity · Rapid-prototyping · Technical eDocumentation,"- Document legacy code from a previous Pure Data project.
+- Developed hardware/software pathways for real-time control of AudioWeaver using Pure Data."
+Neuropop,Web Development/Android Development,01/2015 - 05/2015,"Rapid Prototyping, Data Visualization, Mobile Development",Rapid Prototyping · Data Visualization · Mobile Development,"- Designed applications that focused on auditory solutions for pain for Android.
+- Developed auditory patient surveys for clinical testing for Android.
+- Maintained & create a web UI workflow for observing and saving patient data."
+Boulanger Labs,Solutions Architect/Integration Specialist,2012 - 2014,Pure Data · Csound · OpenFrameworks · TouchOSC · Objective-C,iPad development · HCI · Software Architecture · Interactivity,"- Solutions Architect/Integration Specialist for the Leap Motion application “Muse” featuring BT. Responsible for creating an architecture that connects OpenGL in OpenFrameworks to Pure Data using OSC and then routing these gestures into Csound.
+- Developed the “Auto Muse” feature, an algorithmic play-along system using Fibonacci number theory for the “Muse” application.
+- Prototyped audio DSP algorithms/audio UI integration specialist for “csSpectral”."
+Qu-Bit Electronix,Audio DSP Developer,05/2014 - 11/2014,Csound · Raspberry Pi,Audio DSP · Rapid-prototyping,"- Responsible for creating embedded audio DSP algorithms for module “Nebulae” using Csound.
+- Quality assurance and UX/UI testing."
+Berklee College of Music,ReBoot Tutor,06/2013 - 09/2013,MaxMSP,SoftStep - Interactive Performance - Mentor,"- Assisting professors with interactive development for personal projects.
+- Mentor faculty about design paradigms and creative problem solving."
+Berklee College of Music,Assistive Music Technology Developer,2010 - 2012,MaxMSP · Arduino,Music Technology · Data Sonification · HCI,"- Inventor of “Optical Sonance”, a real-time abstract drawing and sonification machine. Designed custom audio software, based around the Lucas number system, for sonifying light data as it was being drawn. 
+- Inventor of “wiiAirDrum” for the Assistive Music Technology for Blind and Visually Impaired Musicians at Berklee College of Music
+- Software, along with several drawing machines, featured at the “2012 President’s Advisory Council Meeting hosted by Roger Brown”.
+-Invented a wireless glove system and interactive robotics project for Nona Hendrix called MIT-1."

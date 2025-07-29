@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>cskonopka | Work CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="site-title"><a href="/">cskonopka</a></h1>
+      <p class="info-links">
+        <a href="bio.html">bio</a>
+        <a href="cv.html">cv</a>
+        <a href="workcv.html">work cv</a>
+      </p>
+      <div class="social-icons">
+        <a href="https://github.com/cskonopka" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://youtube.com/cskonopka" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://linkedin.com/in/christopherkonopka" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/cskonopka" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </header>
+
+    <section id="workcv"></section>
+
+    <footer class="site-footer">
+      <p>powered by ai 😊</p>
+    </footer>
+  </div>
+
+  <!-- PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    function createTagList(tagString) {
+      return tagString.split('-').map(tag => `<span class="tag">${tag.trim()}</span>`).join(' ');
+    }
+
+    function createBulletList(infoString) {
+      return '<ul>' + infoString.split('-').map(item => `<li>${item.trim()}</li>`).join('') + '</ul>';
+    }
+
+    Papa.parse('data/resume.csv', {
+      download: true,
+      header: true,
+      complete: function(results) {
+        const container = document.getElementById('workcv');
+        results.data.forEach(row => {
+          const section = document.createElement('section');
+          section.classList.add('cv-entry');
+          section.innerHTML = `
+            <h3>${row.job}</h3>
+            <p><strong>Role:</strong> ${row.role}</p>
+            <p><strong>Time:</strong> ${row.time}</p>
+            <p><strong>Skills:</strong> ${createTagList(row.skills)}</p>
+            <p><strong>Topics:</strong> ${createTagList(row.topics)}</p>
+            <p><strong>Info:</strong> ${createBulletList(row.info)}</p>
+          `;
+          container.appendChild(section);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
