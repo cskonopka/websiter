@@ -430,3 +430,51 @@ nav {
 #site-title {
     transition: opacity 1s ease;
 }
+
+.cv-toc {
+  max-width: 1200px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+}
+
+.cv-toc h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.cv-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-toc li {
+  margin-bottom: 10px;
+}
+
+.cv-toc a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.cv-toc a:hover {
+  color: #000;
+}
+
+.cv-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cv-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.cv-section ul {
+  list-style: disc;
+  padding-left: 20px;
+}

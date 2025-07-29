@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cskonopka | CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="site-title">
+        <a href="/">cskonopka</a>
+      </h1>
+
+      <p class="info-links">
+        <a href="bio.html">bio</a>
+        <a href="cv.html">cv</a>
+        <a href="https://yourwebsite.com/artist-cv.pdf" target="_blank">artist cv</a> ·
+        <a href="https://yourwebsite.com/work-cv.pdf" target="_blank">work cv</a>
+      </p>
+
+      <div class="social-icons">
+        <a href="https://github.com/cskonopka" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://youtube.com/cskonopka" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://linkedin.com/in/christopherkonopka" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/cskonopka" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linktr.ee/yourhandle" target="_blank"><i class="fas fa-link"></i></a>
+      </div>
+
+      <nav>
+        <button class="btn" data-filter="all">All</button>
+        <button class="btn" data-filter="art">Art</button>
+        <button class="btn" data-filter="code">Code</button>
+      </nav>
+    </header>
+
+    <!-- Table of Contents -->
+    <section class="cv-toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#patents">Patents</a></li>
+        <li><a href="#installations">Installations</a></li>
+        <!-- <li><a href="#workshops">Workshops</a></li> -->
+        <li><a href="#presentation">Presentations</a></li>
+        <!-- <li><a href="#mentoring">Mentoring</a></li> -->
+        <li><a href="#livestreams">Livestreams</a></li>
+        <li><a href="#livevideo">Live Video Performance</a></li>
+
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#musicvideos">Music Videos</a></li>
+      </ul>
+    </section>
+
+    <!-- Dynamic Sections -->
+    <!-- <section id="talks" class="cv-section">
+      <h3>Talks</h3>
+      <ul id="talks-list"></ul>
+    </section> -->
+    <section id="education" class="cv-section">
+      <h3>Education</h3>
+      <ul id="education-list"></ul>
+    </section>
+
+    <section id="patents" class="cv-section">
+    <h3>Patents</h3>
+    <ul id="patents-list"></ul>
+    </section>
+
+    <section id="installations" class="cv-section">
+    <h3>Installations</h3>
+    <ul id="installations-list"></ul>
+    </section>
+
+
+
+
+    <!-- <section id="workshops" class="cv-section">
+    <h3>Workshops</h3>
+    <ul id="workshops-list"></ul>
+    </section> -->
+
+    <section id="livestreams" class="cv-section">
+    <h3>Livestreams</h3>
+    <ul id="livestreams-list"></ul>
+    </section>
+
+
+    <section id="publications" class="cv-section">
+    <h3>Publications</h3>
+    <ul id="publications-list"></ul>
+    </section>
+
+    <!-- <section id="mentoring" class="cv-section">
+    <h3>Mentoring</h3>
+    <ul id="mentoring-list"></ul>
+    </section> -->
+
+
+    <section id="livevideo" class="cv-section">
+    <h3>Live Video Performance</h3>
+    <ul id="livevideo-list"></ul>
+    </section>
+
+    <section id="presentations" class="cv-section">
+    <h3>Presentations</h3>
+    <ul id="presentations-list"></ul>
+    </section>
+
+
+    <section id="musicvideos" class="cv-section">
+      <h3>Music Videos</h3>
+      <ul id="musicvideos-list"></ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>powered by ai 😊</p>
+    </footer>
+  </div>
+
+  <!-- PapaParse + Dynamic CSV Loader -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    function loadCSV(url, callback) {
+      Papa.parse(url, {
+        download: true,
+        header: true,
+        complete: function(results) {
+          callback(results.data);
+        }
+      });
+    }
+
+//     // Load Mentoring
+// loadCSV('data/mentoring.csv', function(data) {
+//   const list = document.getElementById('mentoring-list');
+//   if (!list) return;
+//   data.forEach(row => {
+//     const li = document.createElement('li');
+//     li.textContent = `${row.year} – ${row.event} – ${row.venue} – ${row.location}`;
+//     list.appendChild(li);
+//   });
+// });
+
+// Load Livestreams
+loadCSV('data/livestreams.csv', function(data) {
+  const list = document.getElementById('livestreams-list');
+  if (!list) return;
+  data.forEach(row => {
+    const li = document.createElement('li');
+    li.textContent = `${row.year} – ${row.event} – ${row.producer}`;
+    list.appendChild(li);
+  });
+});
+
+
+    // Load Talks
+    loadCSV('data/talks.csv', function(data) {
+      const list = document.getElementById('talks-list');
+      if (!list) return;
+      data.forEach(row => {
+        const li = document.createElement('li');
+        li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.project}</a> – ${row.artist}`;
+        list.appendChild(li);
+      });
+    });
+
+    // Load Publications
+    loadCSV('data/publications.csv', function(data) {
+    const list = document.getElementById('publications-list');
+    if (!list) return;
+    data.forEach(row => {
+        const li = document.createElement('li');
+        li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.title}</a> – ${row.source}`;
+        list.appendChild(li);
+    });
+    });
+
+    // Load Public Performances
+    loadCSV('data/presentations.csv', function(data) {
+    const list = document.getElementById('presentations-list');
+    if (!list) return;
+    data.forEach(row => {
+        const li = document.createElement('li');
+        li.textContent = `${row.year} – ${row.title} – ${row.venue} – ${row.location}`;
+        list.appendChild(li);
+    });
+    });
+
+    // Load Patents
+    loadCSV('data/patents.csv', function(data) {
+    const list = document.getElementById('patents-list');
+    if (!list) return;
+    data.forEach(row => {
+        const li = document.createElement('li');
+        li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.title}</a> – ${row.patent}`;
+        list.appendChild(li);
+    });
+    });
+    
+
+    // Load Installations
+    loadCSV('data/installations.csv', function(data) {
+    const list = document.getElementById('installations-list');
+    if (!list) return;
+    data.forEach(row => {
+        const li = document.createElement('li');
+        li.textContent = `${row.year} – ${row.event} – ${row.venue} (${row.location})`;
+        list.appendChild(li);
+    });
+    });
+
+    // // Load Workshops
+    // loadCSV('data/workshops.csv', function(data) {
+    // const list = document.getElementById('workshops-list');
+    // if (!list) return;
+    // data.forEach(row => {
+    //     const li = document.createElement('li');
+    //     li.textContent = `${row.year} – ${row.event} – ${row.venue} – ${row.location}`;
+    //     list.appendChild(li);
+    // });
+    // });
+
+// Load Live Video Performance (updated format)
+loadCSV('data/livevideo.csv', function(data) {
+  const list = document.getElementById('livevideo-list');
+  if (!list) return;
+  data.forEach(row => {
+    const li = document.createElement('li');
+    li.textContent = `${row.year} – ${row.venue} – ${row.location}`;
+    list.appendChild(li);
+  });
+});
+
+
+        // Load Talks
+    loadCSV('data/musicvideos.csv', function(data) {
+      const list = document.getElementById('musicvideos-list');
+      if (!list) return;
+      data.forEach(row => {
+        const li = document.createElement('li');
+        li.innerHTML = `${row.year} – <a href="${row.link}"">${row.song}</a> – ${row.artist}`;
+        list.appendChild(li);
+      });
+    });
+
+    // Load Education
+    loadCSV('data/education.csv', function(data) {
+      const list = document.getElementById('education-list');
+      if (!list) return;
+      data.forEach(row => {
+        const li = document.createElement('li');
+        li.textContent = `${row.year} – ${row.degree} – ${row.school}`;
+        list.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
