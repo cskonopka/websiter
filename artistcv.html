@@ -42,6 +42,7 @@
   <li><em><a href="#patents">Patents</a></em></li>
   <li><em><a href="#installations">Installations</a></em></li>
   <li><em><a href="#presentation">Presentations</a></em></li>
+  <li><em><a href="#residencies">Residencies</a></em></li>
   <li><em><a href="#livestreams">Livestreams</a></em></li>
   <li><em><a href="#livevideo">Live Video Performance</a></em></li>
   <li><em><a href="#publications">Publications</a></em></li>
@@ -69,6 +70,10 @@
     <ul id="installations-list"></ul>
     </section>
 
+    <section id="residencies" class="cv-section">
+    <h2>Residencies</h2>
+    <ul id="residencies-list"></ul>
+    </section>
 
 
 
@@ -146,6 +151,17 @@ loadCSV('data/livestreams.csv', function(data) {
   data.forEach(row => {
     const li = document.createElement('li');
     li.textContent = `${row.year} – ${row.event} – ${row.producer}`;
+    list.appendChild(li);
+  });
+});
+
+// Load Residencies
+loadCSV('data/residencies.csv', function(data) {
+  const list = document.getElementById('residencies-list');
+  if (!list) return;
+  data.forEach(row => {
+    const li = document.createElement('li');
+    li.textContent = `${row.year} – ${row.type} @ ${row.venue} – ${row.location}`;
     list.appendChild(li);
   });
 });
