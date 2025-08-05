@@ -1,19 +1,19 @@
-year,event,venue,location
-2020,PanLux,St. Louis Central Library Auditorium,"St. Louis, MO"
-2020,Cica Museum,Cica Museum,"Seoul, South Korea"
-2019,CreateBy Festival 2019,Boston Children's Museum,"Boston, MA"
-2019,Human Garden,Boston Children's Museum,"Boston, MA"
-2019,Open Projections 4: Spectacle,Coventry Cathedral,"Coventry, UK"
-2019,Twilio After Party,Bill Graham Auditorium,"San Francisco, CA"
-2018,Converge,The Star Store,"Boston, MA"
-2018,Spaceus - Electric Petting Zoo,Fanieul Hall,"Boston, MA"
-2018,Spaceus - Electric Petting Zoo,Fanieul Hall,"Boston, MA"
-2018,Spaceus - Electric Petting Zoo,Fanieul Hall,"Bellevue, WA"
-2017,Creativity of Consciousness,Pennslyvania College of Art & Design,"World Wide, Web"
-2015,MindDraw,Mini Maker Faire,"Providence, RI"
-2015,MoMA Event,The Sol Studio,"Harlem, NY"
-2015,Transformation by Nona Hendrix Opening,The Sol Studio,"Harlem, NY"
-2015,Nona Hendryx Art Opening,DeRose Method,"Tribeca, NY"
-2014,First Night Boston,Hynes Convention Center,"Boston, MA"
-2013,2nd International Csound Conference,Berklee College of Music,"Boston, MA"
-2013,Suburban Noir,The Museum of Sydney,"Sydney, Australia"
+year,event,venue,location,url
+2020,PanLux,St. Louis Central Library Auditorium,"St. Louis, MO",
+2020,Cica Museum,Cica Museum,"Seoul, South Korea",
+2019,CreateBy Festival 2019,Boston Children's Museum,"Boston, MA",
+2019,Human Garden,Boston Children's Museum,"Boston, MA",
+2019,Open Projections 4: Spectacle,Coventry Cathedral,"Coventry, UK",
+2019,Twilio After Party,Bill Graham Auditorium,"San Francisco, CA",
+2018,Converge,The Star Store,"Boston, MA",https://www.southcoasttoday.com/story/news/local/chronicle/2018/01/23/converge-video-exhibit-opens/16020359007/
+2018,Spaceus - Electric Petting Zoo,Fanieul Hall,"Boston, MA",
+2018,Spaceus - Electric Petting Zoo,Fanieul Hall,"Boston, MA",
+2018,Spaceus - Electric Petting Zoo,Fanieul Hall,"Bellevue, WA",
+2017,Creativity of Consciousness,Pennslyvania College of Art & Design,"World Wide, Web",
+2015,MindDraw,Mini Maker Faire,"Providence, RI",
+2015,MoMA Event,The Sol Studio,"Harlem, NY",
+2015,Transformation by Nona Hendrix Opening,The Sol Studio,"Harlem, NY",
+2015,Nona Hendryx Art Opening,DeRose Method,"Tribeca, NY",
+2014,First Night Boston,Hynes Convention Center,"Boston, MA",
+2013,2nd International Csound Conference,Berklee College of Music,"Boston, MA",
+2013,Suburban Noir,The Museum of Sydney,"Sydney, Australia",

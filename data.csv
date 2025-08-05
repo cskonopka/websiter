@@ -32,5 +32,4 @@ Muse,"Muse, created by musician BT and Dr. Richard Boulanger of Berklee, lets yo
 generative Breakpoint Envelope,GBE a generative breakpoint envelope for audio and data projects in MaxMSP.,https://github.com/cskonopka/generativeBreakpointEnvelope,art,2014,https://github.com/cskonopka/GBE/raw/master/assets/generative-breakpoint-envelope-logo.png?raw=true
 wiiAirDrum,Wii-based Drum Sampler created in MaxMSP for a Music Therapy Development Group (Berklee College of Music),https://github.com/cskonopka/wiiAirDrum,art,2014,https://github.com/cskonopka/wiiAirDrum/raw/master/wiiAirDrum-logo.png?raw=true
 opticalSonance,Light Sonification and Drawing Machine Software,https://github.com/cskonopka/opticalSonance,art,2014,https://github.com/cskonopka/opticalSonance/blob/master/v1/Radiation_Drawing%233.JPG?raw=true
-
-Mini-Interactive Tutu,"The project used a custom RC car and three Arduinos—for wireless control, FFT audio input, and RGB LEDs on MIT-1—featured in Nona Hendryx’s “Never Alone.”",https://vimeo.com/224236424,./images/tutu.png,2013,
+Mini-Interactive Tutu,A custom robot for featured in Nona Hendryx’s “Never Alone” with audio responsive lights,https://vimeo.com/224236424, art, 2013,https://github.com/cskonopka/websiter/blob/main/images/tutu.png?raw=true,art,2013,https://vimeo.com/224236424,https://github.com/cskonopka/websiter/blob/main/images/tutu.png?raw=true

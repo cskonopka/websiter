@@ -148,9 +148,17 @@
 loadCSV('data/livestreams.csv', function(data) {
   const list = document.getElementById('livestreams-list');
   if (!list) return;
+
   data.forEach(row => {
     const li = document.createElement('li');
-    li.textContent = `${row.year} – ${row.event} – ${row.producer}`;
+
+    console.log(row.url);
+    if (row.url && row.url.trim() !== '') {
+      li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.event}</a> – ${row.producer}`;
+    } else {
+      li.textContent = `${row.year} – ${row.event} – ${row.producer}`;
+    }
+
     list.appendChild(li);
   });
 });
@@ -167,26 +175,15 @@ loadCSV('data/residencies.csv', function(data) {
 });
 
 
-    // Load Talks
-    loadCSV('data/talks.csv', function(data) {
-      const list = document.getElementById('talks-list');
-      if (!list) return;
-      data.forEach(row => {
-        const li = document.createElement('li');
-        li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.project}</a> – ${row.artist}`;
-        list.appendChild(li);
-      });
-    });
-
     // Load Publications
     loadCSV('data/publications.csv', function(data) {
     const list = document.getElementById('publications-list');
-    if (!list) return;
-    data.forEach(row => {
-        const li = document.createElement('li');
-        li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.title}</a> – ${row.source}`;
-        list.appendChild(li);
-    });
+      if (!list) return;
+        data.forEach(row => {
+            const li = document.createElement('li');
+            li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.title}</a> – ${row.source}`;
+            list.appendChild(li);
+        });
     });
 
     // Load Public Performances
@@ -216,11 +213,22 @@ loadCSV('data/residencies.csv', function(data) {
     loadCSV('data/installations.csv', function(data) {
     const list = document.getElementById('installations-list');
     if (!list) return;
-    data.forEach(row => {
-        const li = document.createElement('li');
-        li.textContent = `${row.year} – ${row.event} – ${row.venue} (${row.location})`;
-        list.appendChild(li);
-    });
+      data.forEach(row => {
+          // const li = document.createElement('li');
+          // li.textContent = `${row.year} – ${row.event} – ${row.venue} (${row.location})`;
+          // list.appendChild(li);
+
+          const li = document.createElement('li');
+
+          console.log(row.url);
+          if (row.url && row.url.trim() !== '') {
+            li.innerHTML = `${row.year} – <a href="${row.url}" target="_blank">${row.event} - ${row.venue}</a> – (${row.location})`;
+          } else {
+            li.textContent = `${row.year} – ${row.event} – ${row.venue} (${row.location})`;
+          }
+
+          list.appendChild(li);
+      });
     });
 
     // // Load Workshops
